@@ -387,7 +387,7 @@ function App() {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white animate-fade-in">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500 dark:from-primary-400 dark:to-secondary-400 animate-gradient-text">
-              <span className="inline-block mr-2">👨‍💻</span> About Me
+              About Me
             </span>
           </h2>
           <div className="max-w-4xl mx-auto transform transition-all duration-700 hover:scale-[1.01]">
@@ -400,19 +400,19 @@ function App() {
               <div className="relative z-10">
                 <div>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mb-4 transform transition-all duration-500 hover:translate-x-1">
-                    <span className="inline-block mr-2">📊</span> Aspiring Data Analyst actively building a career in data science with hands-on experience in data visualization, exploratory data analysis (EDA), and storytelling with data. <span className="inline-block mx-1">💻</span> Enthusiastic about using tools like Python, SQL, and Tableau to turn raw data into <span className="inline-block mx-1">✨</span> actionable insights.
+                    Aspiring Data Analyst actively building a career in data science with hands-on experience in data visualization, exploratory data analysis (EDA), and storytelling with data. Enthusiastic about using tools like Python, SQL, and Tableau to turn raw data into actionable insights.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg transform transition-all duration-500 hover:translate-x-1">
-                    <span className="inline-block mr-2">🤖</span> Currently exploring machine learning and generative AI with a strong curiosity for real-world applications. <span className="inline-block mx-1">🚀</span> Always eager to solve problems, learn new tools, and contribute to <span className="inline-block mx-1">📈</span> data-driven decision-making.
+                    Currently exploring machine learning and generative AI with a strong curiosity for real-world applications. Always eager to solve problems, learn new tools, and contribute to data-driven decision-making.
                   </p>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-3 mt-8 justify-center">
-                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-md">📊 Data Visualization</span>
-                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-md animation-delay-1000">🔍 Exploratory Data Analysis</span>
-                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-md">🧠 Machine Learning</span>
-                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-md">✨ Generative AI</span>
+                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-md">Data Visualization</span>
+                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-md animation-delay-1000">Exploratory Data Analysis</span>
+                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-md">Machine Learning</span>
+                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-md">Generative AI</span>
               </div>
             </div>
           </div>
@@ -993,10 +993,7 @@ function App() {
                 <p className="text-gray-500 dark:text-gray-400">2022 - 2026</p>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-4">Lovely Professional University</p>
-              <div className="flex items-center gap-2">
-                <span className="font-medium text-gray-700 dark:text-gray-300">GPA:</span>
-                <span className="text-gray-600 dark:text-gray-400">6.84</span>
-              </div>
+
               <p className="text-gray-600 dark:text-gray-300 mt-4">
                 Relevant coursework: Data Structures & Algorithms, Database Management Systems,
                 Machine Learning, Data Analytics, Software Engineering
