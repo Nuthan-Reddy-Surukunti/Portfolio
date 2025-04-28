@@ -910,28 +910,36 @@ function App() {
             </div>
           )}
 
-          {/* More Projects Button - Only show for Data Science tab */}
+          {/* Toggle Projects Button - Only show for Data Science tab */}
           {activeProjectTab === 'data-science' && (
-            <div className="flex justify-center mt-12">
-              {!showAllProjects ? (
-                // Show "View More Projects" button when not all projects are shown
-                <button
-                  onClick={() => setShowAllProjects(true)}
-                  className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
-                >
-                  <span>View More Projects</span>
-                  <ChevronRight className="group-hover:rotate-90 transition-transform" size={18} />
-                </button>
-              ) : (
-                // Show GitHub redirect button when all projects are shown
+            <div className="flex flex-col items-center gap-4 mt-12">
+              {/* Toggle between View More and Show Less */}
+              <button
+                onClick={() => setShowAllProjects(!showAllProjects)}
+                className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
+              >
+                {!showAllProjects ? (
+                  <>
+                    <span>View More Projects</span>
+                    <ChevronRight className="group-hover:rotate-90 transition-transform" size={18} />
+                  </>
+                ) : (
+                  <>
+                    <span>Show Less Projects</span>
+                    <ChevronRight className="group-hover:rotate-90 transition-transform rotate-180" size={18} />
+                  </>
+                )}
+              </button>
+
+              {/* GitHub redirect button - Only show when all projects are visible */}
+              {showAllProjects && (
                 <a
                   href="https://github.com/Nuthan-Reddy-Surukunti?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
+                  className="text-primary-600 dark:text-primary-400 font-medium hover:text-primary-800 dark:hover:text-primary-300 transition nav-link flex items-center gap-1 group"
                 >
-                  <span>View Even More on GitHub</span>
-                  <GitHubIcon className="group-hover:translate-x-1 transition-transform" size={18} />
+                  View Even More on GitHub <GitHubIcon className="group-hover:translate-x-1 transition-transform" size={14} />
                 </a>
               )}
             </div>
