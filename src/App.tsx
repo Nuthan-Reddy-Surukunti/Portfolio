@@ -910,37 +910,41 @@ function App() {
             </div>
           )}
 
-          {/* Toggle Projects Button - Only show for Data Science tab */}
+          {/* Project Buttons - Only show for Data Science tab */}
           {activeProjectTab === 'data-science' && (
-            <div className="flex flex-col items-center gap-4 mt-12">
-              {/* Toggle between View More and Show Less */}
-              <button
-                onClick={() => setShowAllProjects(!showAllProjects)}
-                className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
-              >
-                {!showAllProjects ? (
-                  <>
+            <div className="mt-12">
+              {!showAllProjects ? (
+                /* When projects are collapsed, show single "View More Projects" button */
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => setShowAllProjects(true)}
+                    className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
+                  >
                     <span>View More Projects</span>
                     <ChevronRight className="group-hover:rotate-90 transition-transform" size={18} />
-                  </>
-                ) : (
-                  <>
+                  </button>
+                </div>
+              ) : (
+                /* When projects are expanded, show both buttons side by side */
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <button
+                    onClick={() => setShowAllProjects(false)}
+                    className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
+                  >
                     <span>Show Less Projects</span>
                     <ChevronRight className="group-hover:rotate-90 transition-transform rotate-180" size={18} />
-                  </>
-                )}
-              </button>
+                  </button>
 
-              {/* GitHub redirect button - Only show when all projects are visible */}
-              {showAllProjects && (
-                <a
-                  href="https://github.com/Nuthan-Reddy-Surukunti?tab=repositories"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary-600 dark:text-primary-400 font-medium hover:text-primary-800 dark:hover:text-primary-300 transition nav-link flex items-center gap-1 group"
-                >
-                  View Even More on GitHub <GitHubIcon className="group-hover:translate-x-1 transition-transform" size={14} />
-                </a>
+                  <a
+                    href="https://github.com/Nuthan-Reddy-Surukunti?tab=repositories"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
+                  >
+                    <span>View Even More on GitHub</span>
+                    <GitHubIcon className="group-hover:translate-x-1 transition-transform" size={18} />
+                  </a>
+                </div>
               )}
             </div>
           )}
