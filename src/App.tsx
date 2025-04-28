@@ -14,6 +14,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbarBg, setNavbarBg] = useState(false);
   const [activeProjectTab, setActiveProjectTab] = useState('data-science');
+  const [showAllProjects, setShowAllProjects] = useState(false);
   // Initialize darkMode state from localStorage or system preference
   const [darkMode, setDarkMode] = useState(() => {
     // Check localStorage first
@@ -636,13 +637,19 @@ function App() {
           <div className="flex justify-center mb-10">
             <div className="inline-flex rounded-md shadow-sm bg-white dark:bg-gray-800 p-1">
               <button
-                onClick={() => setActiveProjectTab('data-science')}
+                onClick={() => {
+                  setActiveProjectTab('data-science');
+                  setShowAllProjects(false); // Reset to show only 3 projects when switching tabs
+                }}
                 className={`px-4 py-2 text-sm font-medium rounded-md ${activeProjectTab === 'data-science' ? 'bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
               >
                 Data Science
               </button>
               <button
-                onClick={() => setActiveProjectTab('mobile-development')}
+                onClick={() => {
+                  setActiveProjectTab('mobile-development');
+                  setShowAllProjects(false); // Reset to show only 3 projects when switching tabs
+                }}
                 className={`px-4 py-2 text-sm font-medium rounded-md ${activeProjectTab === 'mobile-development' ? 'bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
               >
                 Android & Mobile
@@ -662,6 +669,7 @@ function App() {
                 .filter(project =>
                   !project.name.includes("Spotify") &&
                   !project.name.includes("Cardiovascular"))
+                .slice(0, showAllProjects ? undefined : 3) // Show only first 3 projects if showAllProjects is false
                 .map((project, index) => (
                 <div key={index} className="project-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row gap-6">
@@ -716,8 +724,8 @@ function App() {
                 </div>
               ))}
 
-              {/* Display Spotify and Cardiovascular projects at the end */}
-              {dataScienceProjects
+              {/* Display Spotify and Cardiovascular projects only when showing all projects */}
+              {showAllProjects && dataScienceProjects
                 .filter(project =>
                   project.name.includes("Spotify") ||
                   project.name.includes("Cardiovascular"))
@@ -775,54 +783,56 @@ function App() {
                 </div>
               ))}
 
-              {/* Additional Project - Tableau Dashboard */}
-              <div className="project-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="flex flex-col md:flex-row gap-6">
-                  {/* Project Image */}
-                  <div className="md:w-2/5 overflow-hidden rounded-lg flex items-center justify-center bg-gray-50 dark:bg-gray-700" style={{ aspectRatio: "4/3" }}>
-                    <img
-                      src="/assets/projects/tableau-dashboard.jpg"
-                      alt="Multi-Region Sales Data Dashboard"
-                      className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
-                      style={{ padding: "8px" }}
-                    />
-                  </div>
+              {/* Additional Project - Tableau Dashboard - Only show when all projects are visible */}
+              {showAllProjects && (
+                <div className="project-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    {/* Project Image */}
+                    <div className="md:w-2/5 overflow-hidden rounded-lg flex items-center justify-center bg-gray-50 dark:bg-gray-700" style={{ aspectRatio: "4/3" }}>
+                      <img
+                        src="/assets/projects/tableau-dashboard.jpg"
+                        alt="Multi-Region Sales Data Dashboard"
+                        className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
+                        style={{ padding: "8px" }}
+                      />
+                    </div>
 
-                  {/* Project Content */}
-                  <div className="md:w-3/5">
-                    <div className="flex items-center gap-2 mb-2">
-                      <BarChart size={18} className="text-primary-600 dark:text-primary-400" />
-                      <p className="text-sm text-gray-500 dark:text-gray-400">June 2024 – Aug 2024</p>
+                    {/* Project Content */}
+                    <div className="md:w-3/5">
+                      <div className="flex items-center gap-2 mb-2">
+                        <BarChart size={18} className="text-primary-600 dark:text-primary-400" />
+                        <p className="text-sm text-gray-500 dark:text-gray-400">June 2024 – Aug 2024</p>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Multi-Region Sales Data Dashboard</h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-3">Interactive data visualization dashboard for regional sales analysis</p>
+                      <ul className="list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300 mb-3">
+                        <li>
+                          Developed an <span className="text-primary-600 dark:text-primary-400 font-medium">interactive Tableau dashboard</span> visualizing economic data across multiple regions
+                        </li>
+                        <li>
+                          Implemented <span className="text-primary-600 dark:text-primary-400 font-medium">filtering capabilities</span> to drill down into specific market segments
+                        </li>
+                        <li>
+                          Created <span className="text-primary-600 dark:text-primary-400 font-medium">comprehensive visualizations</span> to identify market trends and optimize strategic planning
+                        </li>
+                      </ul>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 rounded-full text-sm">Tableau</span>
+                        <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 rounded-full text-sm">Data Visualization</span>
+                        <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 rounded-full text-sm">Business Analytics</span>
+                      </div>
+                      <a
+                        href="https://public.tableau.com/app/profile/nuthan.reddy.surukunti/vizzes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary-600 dark:text-primary-400 font-medium hover:text-primary-800 dark:hover:text-primary-300 transition nav-link flex items-center gap-1 group"
+                      >
+                        View Project <ExternalLink size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </a>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Multi-Region Sales Data Dashboard</h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-3">Interactive data visualization dashboard for regional sales analysis</p>
-                    <ul className="list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300 mb-3">
-                      <li>
-                        Developed an <span className="text-primary-600 dark:text-primary-400 font-medium">interactive Tableau dashboard</span> visualizing economic data across multiple regions
-                      </li>
-                      <li>
-                        Implemented <span className="text-primary-600 dark:text-primary-400 font-medium">filtering capabilities</span> to drill down into specific market segments
-                      </li>
-                      <li>
-                        Created <span className="text-primary-600 dark:text-primary-400 font-medium">comprehensive visualizations</span> to identify market trends and optimize strategic planning
-                      </li>
-                    </ul>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 rounded-full text-sm">Tableau</span>
-                      <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 rounded-full text-sm">Data Visualization</span>
-                      <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 rounded-full text-sm">Business Analytics</span>
-                    </div>
-                    <a
-                      href="https://public.tableau.com/app/profile/nuthan.reddy.surukunti/vizzes"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-600 dark:text-primary-400 font-medium hover:text-primary-800 dark:hover:text-primary-300 transition nav-link flex items-center gap-1 group"
-                    >
-                      View Project <ExternalLink size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </a>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           )}
 
@@ -833,7 +843,9 @@ function App() {
                 Android & Mobile Projects
               </h3>
 
-              {mobileProjects.map((project, index) => (
+              {mobileProjects
+                .slice(0, showAllProjects ? undefined : 3) // Show only first 3 projects if showAllProjects is false
+                .map((project, index) => (
                 <div key={index} className="project-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Project Image */}
@@ -898,18 +910,32 @@ function App() {
             </div>
           )}
 
-          {/* More Projects Button */}
-          <div className="flex justify-center mt-12">
-            <a
-              href="https://github.com/Nuthan-Reddy-Surukunti?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
-            >
-              <span>View More Projects</span>
-              <GitHubIcon className="group-hover:translate-x-1 transition-transform" size={18} />
-            </a>
-          </div>
+          {/* More Projects Button - Only show for Data Science tab */}
+          {activeProjectTab === 'data-science' && (
+            <div className="flex justify-center mt-12">
+              {!showAllProjects ? (
+                // Show "View More Projects" button when not all projects are shown
+                <button
+                  onClick={() => setShowAllProjects(true)}
+                  className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
+                >
+                  <span>View More Projects</span>
+                  <ChevronRight className="group-hover:rotate-90 transition-transform" size={18} />
+                </button>
+              ) : (
+                // Show GitHub redirect button when all projects are shown
+                <a
+                  href="https://github.com/Nuthan-Reddy-Surukunti?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white dark:bg-gray-800 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 px-8 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition shadow-md font-medium group flex items-center gap-2 justify-center"
+                >
+                  <span>View Even More on GitHub</span>
+                  <GitHubIcon className="group-hover:translate-x-1 transition-transform" size={18} />
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </section>
 
