@@ -407,6 +407,21 @@ function App() {
                     Currently exploring machine learning and generative AI with a strong curiosity for real-world applications. Always eager to solve problems, learn new tools, and contribute to data-driven decision-making.
                   </p>
                 </div>
+                
+                {/* Video CV Button */}
+                <div className="flex justify-center mt-8 mb-4">
+                  <a
+                    href="https://drive.google.com/file/d/1TRxUEGivYdwHrunW9SqkEijoH330IiOQ/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-6 py-3 rounded-lg hover:from-primary-700 hover:to-secondary-700 transition shadow-md font-medium group flex items-center gap-2 justify-center transform hover:translate-y-[-2px]"
+                  >
+                    <span>Watch Video CV</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </a>
+                </div>
               </div>
 
               <div className="flex flex-wrap gap-3 mt-8 justify-center">
