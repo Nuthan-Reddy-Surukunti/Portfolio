@@ -1,0 +1,344 @@
+{
+  "makes": [
+    "ACURA",
+    "ALFA ROMEO",
+    "AUDI",
+    "AZURE DYNAMICS",
+    "BENTLEY",
+    "BMW",
+    "BRIGHTDROP",
+    "CADILLAC",
+    "CHEVROLET",
+    "CHRYSLER",
+    "DODGE",
+    "FIAT",
+    "FISKER",
+    "FORD",
+    "GENESIS",
+    "GMC",
+    "HONDA",
+    "HYUNDAI",
+    "JAGUAR",
+    "JEEP",
+    "KIA",
+    "LAMBORGHINI",
+    "LAND ROVER",
+    "LEXUS",
+    "LINCOLN",
+    "LUCID",
+    "MAZDA",
+    "MERCEDES-BENZ",
+    "MINI",
+    "MITSUBISHI",
+    "MULLEN AUTOMOTIVE INC.",
+    "NISSAN",
+    "POLESTAR",
+    "PORSCHE",
+    "RAM",
+    "RIVIAN",
+    "ROLLS-ROYCE",
+    "SMART",
+    "SUBARU",
+    "TESLA",
+    "TH!NK",
+    "TOYOTA",
+    "VINFAST",
+    "VOLKSWAGEN",
+    "VOLVO",
+    "WHEEGO ELECTRIC CARS"
+  ],
+  "models": {
+    "ACURA": [
+      "ZDX"
+    ],
+    "ALFA ROMEO": [
+      "TONALE"
+    ],
+    "AUDI": [
+      "E-TRON",
+      "Q5 E",
+      "A3",
+      "Q5",
+      "Q4",
+      "Q8",
+      "Q6",
+      "SQ6",
+      "E-TRON SPORTBACK",
+      "E-TRON GT",
+      "SQ8",
+      "RS E-TRON GT",
+      "S E-TRON GT",
+      "A7 E",
+      "A8 E"
+    ],
+    "AZURE DYNAMICS": [
+      "TRANSIT CONNECT ELECTRIC"
+    ],
+    "BENTLEY": [
+      "FLYING SPUR",
+      "BENTAYGA",
+      "CONTINENTAL"
+    ],
+    "BMW": [
+      "I3",
+      "330E",
+      "X5",
+      "530E",
+      "X3",
+      "M5",
+      "I4",
+      "I5",
+      "IX",
+      "I8",
+      "XM",
+      "550E",
+      "I7",
+      "745E",
+      "745LE",
+      "740E",
+      "750E"
+    ],
+    "BRIGHTDROP": [
+      "ZEVO"
+    ],
+    "CADILLAC": [
+      "LYRIQ",
+      "OPTIQ",
+      "ELR",
+      "VISTIQ",
+      "CT6"
+    ],
+    "CHEVROLET": [
+      "BOLT EV",
+      "VOLT",
+      "SPARK",
+      "BOLT EUV",
+      "BLAZER",
+      "EQUINOX",
+      "SILVERADO",
+      "BRIGHTDROP 400",
+      "BRIGHTDROP 600"
+    ],
+    "CHRYSLER": [
+      "PACIFICA"
+    ],
+    "DODGE": [
+      "CHARGER",
+      "HORNET"
+    ],
+    "FIAT": [
+      "500",
+      "500E"
+    ],
+    "FISKER": [
+      "OCEAN",
+      "KARMA"
+    ],
+    "FORD": [
+      "F-150",
+      "FUSION",
+      "RANGER",
+      "C-MAX",
+      "MUSTANG MACH-E",
+      "FOCUS",
+      "ESCAPE",
+      "TRANSIT"
+    ],
+    "GENESIS": [
+      "GV60",
+      "GV70",
+      "G80"
+    ],
+    "GMC": [
+      "HUMMER EV SUV",
+      "HUMMER EV PICKUP",
+      "SIERRA"
+    ],
+    "HONDA": [
+      "CLARITY",
+      "PROLOGUE",
+      "ACCORD"
+    ],
+    "HYUNDAI": [
+      "KONA",
+      "TUCSON",
+      "IONIQ",
+      "IONIQ 5",
+      "IONIQ 6",
+      "SANTA FE",
+      "SONATA",
+      "IONIQ 5 N"
+    ],
+    "JAGUAR": [
+      "I-PACE"
+    ],
+    "JEEP": [
+      "WRANGLER",
+      "GRAND CHEROKEE",
+      "WAGONEER S"
+    ],
+    "KIA": [
+      "SOUL",
+      "SORENTO",
+      "NIRO",
+      "SPORTAGE",
+      "EV9",
+      "EV6",
+      "OPTIMA"
+    ],
+    "LAMBORGHINI": [
+      "REVUELTO",
+      "URUS"
+    ],
+    "LAND ROVER": [
+      "RANGE ROVER SPORT",
+      "RANGE ROVER"
+    ],
+    "LEXUS": [
+      "NX",
+      "RX",
+      "RZ",
+      "TX"
+    ],
+    "LINCOLN": [
+      "CORSAIR",
+      "AVIATOR"
+    ],
+    "LUCID": [
+      "AIR"
+    ],
+    "MAZDA": [
+      "CX-90",
+      "CX-70",
+      "MX-30"
+    ],
+    "MERCEDES-BENZ": [
+      "B-CLASS",
+      "EQS-CLASS SEDAN",
+      "EQS-CLASS SUV",
+      "EQB-CLASS",
+      "E-CLASS",
+      "GLE-CLASS",
+      "EQE-CLASS SUV",
+      "GLC-CLASS",
+      "EQE-CLASS SEDAN",
+      "G-CLASS",
+      "S-CLASS",
+      "C-CLASS",
+      "ESPRINTER",
+      "AMG GT",
+      "SL-CLASS"
+    ],
+    "MINI": [
+      "HARDTOP",
+      "COUNTRYMAN"
+    ],
+    "MITSUBISHI": [
+      "OUTLANDER",
+      "I-MIEV"
+    ],
+    "MULLEN AUTOMOTIVE INC.": [
+      "ONE"
+    ],
+    "NISSAN": [
+      "LEAF",
+      "ARIYA"
+    ],
+    "POLESTAR": [
+      "PS2",
+      "POLESTAR 3"
+    ],
+    "PORSCHE": [
+      "CAYENNE",
+      "TAYCAN",
+      "PANAMERA",
+      "MACAN",
+      "918"
+    ],
+    "RAM": [
+      "PROMASTER 3500"
+    ],
+    "RIVIAN": [
+      "R1T",
+      "R1S",
+      "EDV"
+    ],
+    "ROLLS-ROYCE": [
+      "SPECTRE"
+    ],
+    "SMART": [
+      "FORTWO",
+      "FORTWO ELECTRIC DRIVE",
+      "EQ FORTWO"
+    ],
+    "SUBARU": [
+      "SOLTERRA",
+      "CROSSTREK"
+    ],
+    "TESLA": [
+      "MODEL 3",
+      "MODEL X",
+      "MODEL S",
+      "MODEL Y",
+      "CYBERTRUCK",
+      "ROADSTER"
+    ],
+    "TH!NK": [
+      "CITY"
+    ],
+    "TOYOTA": [
+      "PRIUS PRIME (PHEV)",
+      "RAV4 PRIME (PHEV)",
+      "PRIUS",
+      "RAV4",
+      "BZ4X",
+      "MIRAI"
+    ],
+    "VINFAST": [
+      "VF 8"
+    ],
+    "VOLKSWAGEN": [
+      "E-GOLF",
+      "ID.4",
+      "ID. BUZZ"
+    ],
+    "VOLVO": [
+      "XC60",
+      "XC90",
+      "EX40",
+      "XC40",
+      "EX90",
+      "S60",
+      "C40",
+      "EX30",
+      "V60",
+      "S90"
+    ],
+    "WHEEGO ELECTRIC CARS": [
+      "WHEEGO"
+    ]
+  },
+  "years": [
+    2026,
+    2025,
+    2024,
+    2023,
+    2022,
+    2021,
+    2020,
+    2019,
+    2018,
+    2017,
+    2016,
+    2015,
+    2014,
+    2013,
+    2012,
+    2011,
+    2010,
+    2008,
+    2003,
+    2002,
+    2000
+  ]
+}
