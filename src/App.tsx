@@ -151,7 +151,7 @@ function App() {
         { text: "Integrated ", highlight: "frontend and backend", rest: " using Flask API and deployed on Render for seamless user experience" }
       ],
       technologies: ["Python", "FastAPI", "React", "scikit-learn", "joblib", "Render.com", "Netlify"],
-      repoUrl: "https://ev-api-backend.onrender.com/docs", // Or your GitHub repo URL
+      repoUrl: "https://github.com/Nuthan-Reddy-Surukunti/Ev_Cars-Range-Prediction-Project",
       icon: <Sparkles className="text-primary-600" size={18} />, // Use a unique icon
       category: "data-science",
       imagePath: "/assets/projects/Ev-range-prediction.png"
